@@ -17,7 +17,7 @@ get '/' do
   return_to = "http://#{request.host_with_port}/complete"
   realm = "http://#{request.host_with_port}"
   
-  redirect client.redirect_url :return_to => return_to, realm => realm
+  redirect client.redirect_url :return_to => return_to, :realm => realm
 end
 
 get '/complete' do
