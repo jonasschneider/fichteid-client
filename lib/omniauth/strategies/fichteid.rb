@@ -10,9 +10,10 @@ module OmniAuth
       include OmniAuth::Strategy
       
       option :site, "http://fichteid.heroku.com/"
+      option :key, 'mypw'
       
       def client
-        Fichteid::Client.new 'mypw', session
+        Fichteid::Client.new options[:key], session
       end
       
       def request_phase
