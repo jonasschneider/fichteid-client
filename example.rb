@@ -9,7 +9,7 @@ enable :sessions
 
 helpers do
   def client
-    Fichteid::Client.new 'mypw', session
+    Fichteid::Client.new 'mypw', session, :site => 'http://titan:9292'
   end
 end
 
